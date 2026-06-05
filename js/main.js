@@ -1,4 +1,13 @@
 gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.config({ limitCallbacks: true, ignoreMobileResize: true });
+
+const idleTweens = [];
+const isMobile = () => window.matchMedia("(max-width: 900px)").matches;
+
+function addIdleTween(tween) {
+  idleTweens.push(tween);
+  return tween;
+}
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -67,16 +76,16 @@ function initHero() {
     .to(".crowd-silhouette", { opacity: 1, duration: 0.5 }, "-=0.4")
     .to(".scroll-hint", { opacity: 1, duration: 0.5 }, "-=0.2");
 
-  gsap.to(".hero-ball", {
+  addIdleTween(gsap.to(".hero-ball", {
     y: -20,
     rotation: 360,
     duration: 3,
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut",
-  });
+  }));
 
-  gsap.to(".hero-shuttle", {
+  addIdleTween(gsap.to(".hero-shuttle", {
     y: 15,
     x: 10,
     rotation: -25,
@@ -84,15 +93,15 @@ function initHero() {
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut",
-  });
+  }));
 
-  gsap.to(".megaphone", {
+  addIdleTween(gsap.to(".megaphone", {
     rotation: -8,
     duration: 0.6,
     repeat: -1,
     yoyo: true,
     ease: "sine.inOut",
-  });
+  }));
 
   animateCounters();
 }
@@ -113,8 +122,10 @@ function animateCounters() {
 
 /* ===== Floating flags ===== */
 function initFlags() {
+  if (isMobile()) return;
+
   gsap.utils.toArray(".flags-bg .flag").forEach((flag, i) => {
-    gsap.to(flag, {
+    addIdleTween(gsap.to(flag, {
       y: gsap.utils.random(-30, 30),
       x: gsap.utils.random(-20, 20),
       rotation: gsap.utils.random(-15, 15),
@@ -123,12 +134,14 @@ function initFlags() {
       yoyo: true,
       ease: "sine.inOut",
       delay: i * 0.3,
-    });
+    }));
   });
 }
 
 /* ===== Hero parallax stripes ===== */
 function initParallax() {
+  if (isMobile()) return;
+
   gsap.utils.toArray(".hero-stripe").forEach((stripe, i) => {
     gsap.to(stripe, {
       x: (i + 1) * 60,
@@ -142,53 +155,68 @@ function initParallax() {
   });
 }
 
-/* ===== Match section — pin + scrub ===== */
+/* ===== Match section ===== */
 function initMatchSection() {
-  const cheerTarget = 72;
-
-  ScrollTrigger.create({
-    trigger: ".match-section",
-    start: "top top",
-    end: "+=120%",
-    pin: ".match-pin-wrapper",
-    pinSpacing: true,
-  });
-
-  gsap.from(".match-card", {
-    scale: 0.85,
+  gsap.from(".match-section .section-tag, .match-section .sport-tabs", {
+    y: 24,
     opacity: 0,
+    stagger: 0.08,
+    duration: 0.5,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".match-section",
-      start: "top 70%",
-      end: "top 30%",
-      scrub: 1,
+      start: "top 80%",
+      toggleActions: "play none none none",
+      once: true,
     },
   });
 
-  gsap.to("#cheerFill", {
-    width: cheerTarget + "%",
+  gsap.from(".match-card", {
+    scale: 0.96,
+    opacity: 0,
+    duration: 0.55,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".match-section",
-      start: "top 60%",
-      end: "bottom 40%",
-      scrub: 1,
-      onUpdate: (self) => {
-        const pct = Math.round(cheerTarget * self.progress);
-        document.getElementById("cheerPercent").textContent = pct + "%";
-      },
+      start: "top 75%",
+      toggleActions: "play none none none",
+      once: true,
     },
   });
 
   gsap.from(".countdown-item", {
-    y: 40,
+    y: 24,
     opacity: 0,
-    stagger: 0.1,
+    stagger: 0.06,
+    duration: 0.45,
+    ease: "power2.out",
     scrollTrigger: {
       trigger: ".match-section",
-      start: "top 75%",
-      toggleActions: "play none none reverse",
+      start: "top 72%",
+      toggleActions: "play none none none",
+      once: true,
     },
   });
+
+  gsap.fromTo(
+    "#cheerFill",
+    { scaleX: 0, transformOrigin: "left center" },
+    {
+      scaleX: 0.72,
+      duration: 1.2,
+      ease: "power2.out",
+      onUpdate: function () {
+        document.getElementById("cheerPercent").textContent =
+          Math.round(this.progress() * 72) + "%";
+      },
+      scrollTrigger: {
+        trigger: ".cheer-bar",
+        start: "top 90%",
+        toggleActions: "play none none none",
+        once: true,
+      },
+    }
+  );
 }
 
 /* ===== Sport tabs ===== */
@@ -403,14 +431,12 @@ async function initImages() {
   renderPhotoGrid(
     "gallery-sinhvien",
     pickImages(siteImages.sinhVien?.sectionRaTruong),
-    alt.sinhVien || "Sinh viên Làng 8",
-    true
+    alt.sinhVien || "Sinh viên Làng 8"
   );
   renderPhotoGrid(
     "gallery-lang8",
     pickImages(siteImages.lang8?.khoanhKhac),
-    alt.chung || "Khoảnh khắc Làng 8",
-    true
+    alt.chung || "Khoảnh khắc Làng 8"
   );
 
   renderPhotoStrip("strip-bongda", pickImages(siteImages.bongDa?.stripDuoiTran));
@@ -419,8 +445,7 @@ async function initImages() {
   renderPhotoGrid(
     "fanGallery",
     pickImages(siteImages.coDongVien?.gallery),
-    alt.chung || "Làng 8",
-    true
+    alt.chung || "Làng 8"
   );
 
   fillPlayerPhotos(siteImages);
@@ -451,13 +476,13 @@ function showSoundGate() {
       { scale: 0.85, opacity: 0, y: 30 },
       { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)" }
     );
-    gsap.to(".sound-gate-icon", {
+    addIdleTween(gsap.to(".sound-gate-icon", {
       scale: 1.08,
       duration: 0.8,
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
-    });
+    }));
   }
 }
 
@@ -503,24 +528,18 @@ function initMusic() {
 }
 
 function initPhotoGridAnim(containerSelector) {
-  const cards = gsap.utils.toArray(`${containerSelector} .photo-card`);
-  if (!cards.length) return;
-
-  gsap.set(cards, { opacity: 1, y: 0, scale: 1 });
-
-  gsap.from(cards, {
-    y: 40,
-    scale: 0.92,
-    stagger: 0.1,
-    duration: 0.65,
-    ease: "power3.out",
-    immediateRender: false,
-    scrollTrigger: {
-      trigger: containerSelector,
-      start: "top 92%",
-      toggleActions: "play none none none",
-      once: true,
-      invalidateOnRefresh: true,
+  ScrollTrigger.batch(`${containerSelector} .photo-card`, {
+    start: "top 92%",
+    once: true,
+    onEnter: (batch) => {
+      gsap.from(batch, {
+        y: 24,
+        scale: 0.96,
+        stagger: 0.04,
+        duration: 0.45,
+        ease: "power2.out",
+        overwrite: true,
+      });
     },
   });
 }
@@ -917,6 +936,13 @@ function initReducedMotion() {
   });
 }
 
+/* ===== Pause idle animations khi tab ẩn ===== */
+function initVisibilityPause() {
+  document.addEventListener("visibilitychange", () => {
+    idleTweens.forEach((t) => (document.hidden ? t.pause() : t.play()));
+  });
+}
+
 /* ===== Init ===== */
 document.addEventListener("DOMContentLoaded", async () => {
   if (location.hash) {
@@ -925,9 +951,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   scrollToTop();
 
   await initImages();
-  await waitForImages("#gallery-sinhvien");
-  await waitForImages("#gallery-lang8");
-  await waitForImages("#fanGallery");
   scrollToTop();
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -962,7 +985,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   initForm();
   initNav();
   initReducedMotion();
+  initVisibilityPause();
 
   scrollToTop();
-  ScrollTrigger.refresh();
+  requestAnimationFrame(() => ScrollTrigger.refresh());
 });

@@ -28,6 +28,14 @@ window.addEventListener("pageshow", (e) => {
 
 /* ===== Preloader ===== */
 function initPreloader() {
+  if (isMobile()) {
+    const el = document.getElementById("preloader");
+    if (el) el.style.display = "none";
+    initHero();
+    showSoundGate();
+    return;
+  }
+
   const tl = gsap.timeline({
     onComplete: () => {
       gsap.to("#preloader", {
@@ -68,32 +76,40 @@ function initHero() {
     .to(".hero-sub", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
     .to(".hero-sports", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
     .to(".hero-actions", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
-    .to(".hero-stats", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3")
-    .from(".hero-ball", { scale: 0, rotation: -180, opacity: 0, duration: 1, ease: "back.out(2)" }, "-=0.6")
-    .from(".hero-shuttle", { scale: 0, rotation: 180, opacity: 0, duration: 1, ease: "back.out(2)" }, "-=0.8")
+    .to(".hero-stats", { opacity: 1, y: 0, duration: 0.6 }, "-=0.3");
+
+  if (!isMobile()) {
+    heroTl
+      .from(".hero-ball", { scale: 0, rotation: -180, opacity: 0, duration: 1, ease: "back.out(2)" }, "-=0.6")
+      .from(".hero-shuttle", { scale: 0, rotation: 180, opacity: 0, duration: 1, ease: "back.out(2)" }, "-=0.8");
+  }
+
+  heroTl
     .from(".hero-collage img", { scale: 0, opacity: 0, stagger: 0.12, duration: 0.7, ease: "back.out(1.4)" }, "-=0.7")
     .from(".megaphone", { x: 100, opacity: 0, rotation: 20, duration: 0.8, ease: "elastic.out(1, 0.5)" }, "-=0.7")
     .to(".crowd-silhouette", { opacity: 1, duration: 0.5 }, "-=0.4")
     .to(".scroll-hint", { opacity: 1, duration: 0.5 }, "-=0.2");
 
-  addIdleTween(gsap.to(".hero-ball", {
-    y: -20,
-    rotation: 360,
-    duration: 3,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  }));
+  if (!isMobile()) {
+    addIdleTween(gsap.to(".hero-ball", {
+      y: -20,
+      rotation: 360,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    }));
 
-  addIdleTween(gsap.to(".hero-shuttle", {
-    y: 15,
-    x: 10,
-    rotation: -25,
-    duration: 2.2,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut",
-  }));
+    addIdleTween(gsap.to(".hero-shuttle", {
+      y: 15,
+      x: 10,
+      rotation: -25,
+      duration: 2.2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    }));
+  }
 
   addIdleTween(gsap.to(".megaphone", {
     rotation: -8,

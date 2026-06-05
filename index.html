@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cổ vũ Làng 8 — Lễ ra trường sinh viên Công Giáo. Bóng đá & cầu lông!" />
+  <title>✝ Cổ Vũ Làng 8 — Sinh Viên CG 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Bungee&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-icons">
+      <span class="preloader-ball">⚽</span>
+      <span class="preloader-shuttle">🏸</span>
+    </div>
+    <p class="preloader-text">Xin Chúa ban ơn — chuẩn bị ngày hội...</p>
+  </div>
+
+  <!-- Catholic subtle watermark -->
+  <div class="faith-watermark" aria-hidden="true">✝</div>
+
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Floating flags background -->
+  <div class="flags-bg" aria-hidden="true">
+    <span class="flag">🚩</span>
+    <span class="flag">🏳️</span>
+    <span class="flag">🚩</span>
+    <span class="flag">🏴</span>
+    <span class="flag">🚩</span>
+    <span class="flag">🏳️</span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <img class="logo-img" src="img/logo/logotrang.jpg" alt="Cổ Vũ Làng 8" width="38" height="38" />
+      <span>CỔ VŨ LÀNG 8</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sinh-vien">Sinh viên</a></li>
+      <li><a href="#trận-đấu">Trận đấu</a></li>
+      <li><a href="#hinh-anh">Hình ảnh</a></li>
+      <li><a href="#đội-hình">Đội hình</a></li>
+      <li><a href="#cổ-động-viên">CĐV</a></li>
+      <li><a href="#tham-gia" class="nav-cta">Hò reo ngay!</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Mở menu">☰</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-stripe"></div>
+      <div class="hero-stripe"></div>
+      <div class="hero-stripe"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-badge">✝ Lễ Ra Trường — Sinh Viên Công Giáo Làng 8</p>
+      <h1 class="hero-title">
+        <span class="title-line">HÒ REO</span>
+        <span class="title-line title-accent">LÀNG 8</span>
+      </h1>
+      <p class="hero-sub">Thế hệ ra trường — ⚽ bóng đá & 🏸 cầu lông — cùng niềm tin, cùng chiến thắng!</p>
+      <div class="hero-sports">
+        <span class="hero-sport-pill">⚽ Bóng đá nữ</span>
+        <span class="hero-sport-pill hero-sport-pill--badminton">🏸 Cầu lông</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#trận-đấu" class="btn btn-primary">Xem lịch thi đấu</a>
+        <a href="#tham-gia" class="btn btn-outline">Tham gia cổ vũ</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-count="128">0</span>
+          <span class="stat-label">CĐV đăng ký</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="12">0</span>
+          <span class="stat-label">Trận đã thắng</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-count="47">0</span>
+          <span class="stat-label">Bàn / điểm</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-collage" id="heroCollage" aria-label="Ảnh sinh viên Làng 8"></div>
+      <div class="megaphone">📣</div>
+      <div class="hero-ball">⚽</div>
+      <div class="hero-shuttle">🏸</div>
+      <div class="crowd-silhouette"></div>
+    </div>
+    <div class="scroll-hint">
+      <span>Cuộn xuống</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </header>
+
+  <!-- Sinh viên ra trường -->
+  <section class="section grad-section" id="sinh-vien">
+    <div class="container">
+      <div class="section-tag section-tag--faith">✝ Sinh viên Công Giáo</div>
+      <h2 class="section-title">THẾ HỆ RA TRƯỜNG LÀNG 8</h2>
+      <p class="section-desc">Những ngày cuối trên ghế nhà trường — bước ra sân cỏ và sân cầu với niềm tin và khát vọng.</p>
+      <div class="photo-grid photo-grid--featured" id="gallery-sinhvien"></div>
+    </div>
+  </section>
+
+  <!-- Match section (pinned) -->
+  <section class="section match-section" id="trận-đấu">
+    <div class="match-pin-wrapper">
+      <div class="match-inner">
+        <div class="section-tag">⚡ Trận chung kết</div>
+
+        <div class="sport-tabs" data-tabs="match">
+          <button type="button" class="sport-tab active" data-sport="bong-da">⚽ Bóng đá nữ</button>
+          <button type="button" class="sport-tab" data-sport="cau-long">🏸 Cầu lông</button>
+        </div>
+
+        <!-- Bóng đá -->
+        <div class="sport-panel active" data-panel="bong-da">
+          <h2 class="section-title">LÀNG 8 VS ???</h2>
+          <div class="match-card">
+            <div class="team team-home">
+              <div class="team-badge team-badge--img">
+                <img src="img/logo/logolang8.jpg" alt="Logo Làng 8" width="80" height="80" />
+              </div>
+              <h3>Làng 8</h3>
+              <p class="team-nickname">"Quê hương — sân nhà — niềm tự hào"</p>
+            </div>
+            <div class="match-center">
+              <div class="match-vs">VS</div>
+              <div class="countdown">
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="bd-days">00</span>
+                  <span class="countdown-label">Ngày</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="bd-hours">00</span>
+                  <span class="countdown-label">Giờ</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="bd-mins">00</span>
+                  <span class="countdown-label">Phút</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="bd-secs">00</span>
+                  <span class="countdown-label">Giây</span>
+                </div>
+              </div>
+              <p class="match-info">📍 Sân bóng Làng 8 — Thứ Hai, 15/06/2026 — 15h</p>
+            </div>
+            <div class="team team-away">
+              <div class="team-badge">❓</div>
+              <h3>Chưa biết</h3>
+              <p class="team-nickname">"Đang chờ xác nhận đối thủ"</p>
+            </div>
+          </div>
+          <div class="photo-strip" id="strip-bongda" aria-label="Ảnh bóng đá"></div>
+        </div>
+
+        <!-- Cầu lông -->
+        <div class="sport-panel" data-panel="cau-long">
+          <h2 class="section-title section-title--badminton">LÀNG 8 VS ???</h2>
+          <div class="match-card match-card--badminton">
+            <div class="team team-home">
+              <div class="team-badge team-badge--img">
+                <img src="img/logo/logolang8.jpg" alt="Logo Làng 8" width="80" height="80" />
+              </div>
+              <h3>Làng 8</h3>
+              <p class="team-nickname">"Smash mạnh — Lưới chắc — Làng 8 vô địch"</p>
+            </div>
+            <div class="match-center">
+              <div class="match-vs match-vs--badminton">VS</div>
+              <div class="countdown">
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="cl-days">00</span>
+                  <span class="countdown-label">Ngày</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="cl-hours">00</span>
+                  <span class="countdown-label">Giờ</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="cl-mins">00</span>
+                  <span class="countdown-label">Phút</span>
+                </div>
+                <div class="countdown-item">
+                  <span class="countdown-num" data-countdown="cl-secs">00</span>
+                  <span class="countdown-label">Giây</span>
+                </div>
+              </div>
+              <p class="match-info">📍 Sân cầu lông Làng 8 — Thứ Hai, 15/06/2026 — 15h</p>
+            </div>
+            <div class="team team-away">
+              <div class="team-badge">❓</div>
+              <h3>Chưa biết</h3>
+              <p class="team-nickname">"Đang chờ xác nhận đối thủ"</p>
+            </div>
+          </div>
+          <div class="photo-strip photo-strip--badminton" id="strip-caulong" aria-label="Ảnh cầu lông"></div>
+        </div>
+
+        <div class="cheer-bar">
+          <div class="cheer-fill" id="cheerFill"></div>
+          <p class="cheer-text">🔥 Nhiệt độ cổ vũ: <strong id="cheerPercent">72%</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Squad -->
+  <section class="section squad-section" id="đội-hình">
+    <div class="container">
+      <div class="section-tag">👕 Đội hình</div>
+
+      <div class="sport-tabs" data-tabs="squad">
+        <button type="button" class="sport-tab active" data-sport="bong-da">⚽ Bóng đá nữ</button>
+        <button type="button" class="sport-tab" data-sport="cau-long">🏸 Cầu lông</button>
+      </div>
+
+      <!-- Bóng đá nữ -->
+      <div class="sport-panel active" data-panel="bong-da">
+        <h2 class="section-title">CHỊ EM SÂN CỎ</h2>
+        <p class="section-desc">Những chị em Làng 8 mang danh dự lên sân — hãy hò reo tên các chị!</p>
+        <div class="squad-grid">
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">1</div>
+            <div class="player-photo"></div>
+            <h3>Nguyễn Văn Găng</h3>
+            <p>Thủ môn — "Bàn tay sắt"</p>
+          </article>
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">7</div>
+            <div class="player-photo"></div>
+            <h3>Trần Minh Sóc</h3>
+            <p>Tiền đạo — "Tia chớp cánh phải"</p>
+          </article>
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">10</div>
+            <div class="player-photo"></div>
+            <h3>Lê Hoàng Sút</h3>
+            <p>Tiền vệ — "Chúa tể giữa sân"</p>
+          </article>
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">4</div>
+            <div class="player-photo"></div>
+            <h3>Phạm Văn Chắn</h3>
+            <p>Hậu vệ — "Bức tường thép"</p>
+          </article>
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">9</div>
+            <div class="player-photo"></div>
+            <h3>Hoàng Đức Bàn</h3>
+            <p>Tiền đạo — "Sát thủ vòng cấm"</p>
+          </article>
+          <article class="player-card" data-sport="bongda">
+            <div class="player-num">11</div>
+            <div class="player-photo"></div>
+            <h3>Võ Thành Gió</h3>
+            <p>Cánh trái — "Cơn lốc xóm"</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Cầu lông -->
+      <div class="sport-panel" data-panel="cau-long">
+        <h2 class="section-title section-title--badminton">TAY VỢT LÀNG 8</h2>
+        <p class="section-desc">Những tay vợt xuất sắc Làng 8 — hò reo từng cú smash!</p>
+        <div class="squad-grid">
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">1</div>
+            <div class="player-photo"></div>
+            <h3>Nguyễn Văn Smash</h3>
+            <p>Đơn nam — "Cú đập thần sầu"</p>
+          </article>
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">2</div>
+            <div class="player-photo"></div>
+            <h3>Trần Thị Drop</h3>
+            <p>Đơn nữ — "Cú drop bất ngờ"</p>
+          </article>
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">3</div>
+            <div class="player-photo"></div>
+            <h3>Lê Minh Clear</h3>
+            <p>Đơn nam — "Phòng thủ sắt"</p>
+          </article>
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">4</div>
+            <div class="player-photo"></div>
+            <h3>Phạm Hoài Net</h3>
+            <p>Đôi nam — "Sát lưới Làng 8"</p>
+          </article>
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">5</div>
+            <div class="player-photo"></div>
+            <h3>Võ Thành Drive</h3>
+            <p>Đôi nam — "Cú drive bay cao"</p>
+          </article>
+          <article class="player-card player-card--badminton" data-sport="caulong">
+            <div class="player-num">6</div>
+            <div class="player-photo"></div>
+            <h3>Hoàng Linh Đôi</h3>
+            <p>Đôi nam nữ — "Song sát bất bại"</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Khoảnh khắc Làng 8 -->
+  <section class="section gallery-section" id="hinh-anh">
+    <div class="container">
+      <div class="section-tag">📸 Thư viện ảnh</div>
+      <h2 class="section-title">KHOẢNH KHẮC LÀNG 8</h2>
+      <p class="section-desc section-desc--center">Ảnh từ thư mục <code>img/lang8/</code> — sửa link trong <code>data/hinh-anh.json</code></p>
+      <div class="photo-grid photo-grid--featured" id="gallery-lang8"></div>
+    </div>
+  </section>
+
+  <!-- Supporters -->
+  <section class="section fans-section" id="cổ-động-viên">
+    <div class="container">
+      <div class="section-tag">📣 Cổ động viên</div>
+      <h2 class="section-title">TIẾNG HÒ LÀNG 8</h2>
+      <p class="section-desc section-desc--center">Lời gáy từ anh em CĐV — hò theo cho đúng bài!</p>
+
+      <div class="loi-gay-wall" id="loiGayWall" aria-live="polite">
+        <p class="loi-gay-empty">Đang tải lời gáy...</p>
+      </div>
+
+      <h3 class="chants-subtitle">⚽ Khẩu hiệu bóng đá nữ</h3>
+      <div class="chants">
+        <blockquote class="chant chant--highlight">"Một hai ba — Zô zô zô!"</blockquote>
+        <blockquote class="chant">"Làng 8 vô địch trong lòng người hâm mộ!"</blockquote>
+        <blockquote class="chant">"Không cầm cup thì ta cầm beer!"</blockquote>
+        <blockquote class="chant">"Chị em lên — Vô địch Làng 8!"</blockquote>
+      </div>
+
+      <h3 class="chants-subtitle chants-subtitle--badminton">🏸 Cầu lông</h3>
+      <div class="chants chants--badminton">
+        <blockquote class="chant chant--badminton">"Làng 8 ơi — Smash thôi!"</blockquote>
+        <blockquote class="chant chant--badminton">"Áo vàng bay — Cầu không qua!"</blockquote>
+        <blockquote class="chant chant--badminton">"Đập mạnh lên — Đối thủ choáng!"</blockquote>
+        <blockquote class="chant chant--badminton">"Lưới Làng 8 chắc — Vô địch thôi!"</blockquote>
+      </div>
+
+      <div class="photo-grid photo-grid--fans" id="fanGallery"></div>
+    </div>
+  </section>
+
+  <!-- Lời nguyện -->
+  <section class="section blessing-section" id="loi-nguyen">
+    <div class="container">
+      <div class="blessing-card">
+        <div class="blessing-cross">✝</div>
+        <p class="blessing-label">Sinh viên Công Giáo — Lễ Ra Trường</p>
+        <blockquote class="blessing-quote">
+          "Hãy chạy sao cho đạt đến đích, và phấn đấu giành phần thưởng vĩnh cửu."
+        </blockquote>
+        <cite class="blessing-cite">— Thánh Phao-lô, 1 Cor 9, 24</cite>
+        <p class="blessing-wish">
+          Xin Chúa Giê-su và Đức Mẹ Maria phù hộ đoàn sinh viên Làng 8 thi đua an toàn,
+          fair-play và tràn đầy niềm vui ngày lễ ra trường!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section class="section join-section" id="tham-gia">
+    <div class="container">
+      <div class="join-card">
+        <h2>Tham gia hàng cổ vũ Làng 8!</h2>
+        <p>Ghi tên, mang cờ, hò reo cùng anh em sinh viên Làng 8 — bóng đá lẫn cầu lông!</p>
+        <form class="join-form" id="joinForm">
+          <input type="text" name="ten" id="inputTen" placeholder="Tên của bạn..." required />
+          <input type="tel" name="sdt" id="inputSdt" placeholder="Số điện thoại..." />
+          <label class="form-label">Cổ vũ môn nào?</label>
+          <div class="form-sports">
+            <label class="sport-radio">
+              <input type="radio" name="mon" value="bong-da" checked />
+              <span>⚽ Bóng đá nữ</span>
+            </label>
+            <label class="sport-radio">
+              <input type="radio" name="mon" value="cau-long" />
+              <span>🏸 Cầu lông</span>
+            </label>
+            <label class="sport-radio">
+              <input type="radio" name="mon" value="ca-hai" />
+              <span>⚽🏸 Cả hai</span>
+            </label>
+          </div>
+          <label class="form-label" for="inputLoiGay">Bạn có muốn gửi lời gáy gì không?</label>
+          <textarea
+            name="loiGay"
+            id="inputLoiGay"
+            class="form-textarea"
+            rows="3"
+            maxlength="200"
+            placeholder="VD: Làng 8 ơi — Ghi bàn / Smash thôi! 🔥"
+          ></textarea>
+          <button type="submit" class="btn btn-primary btn-lg">ĐĂNG KÝ CỔ VŨ 🎉</button>
+        </form>
+        <button type="button" class="btn btn-outline btn-list" id="showRegBtn">
+          📋 Xem danh sách đã đăng ký (<span id="regBadge">0</span>)
+        </button>
+        <p class="join-note" id="joinNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>✝ ⚽🏸 Cổ Vũ Làng 8 — Sinh Viên Công Giáo</p>
+    <p class="footer-sub">Maria phù hộ Làng 8 — Đá bóng, cầu lông, chiến thắng!</p>
+    <p class="footer-contact">👕 Liên hệ áo đấu số 86 có chút việc nhé ))</p>
+  </footer>
+
+  <!-- Modal danh sách đăng ký -->
+  <div class="reg-modal" id="regModal" aria-hidden="true">
+    <div class="reg-modal-backdrop" id="regModalBackdrop"></div>
+    <div class="reg-modal-panel" role="dialog" aria-labelledby="regModalTitle">
+      <button type="button" class="reg-modal-close" id="regModalClose" aria-label="Đóng">×</button>
+      <h3 class="reg-modal-title" id="regModalTitle">📋 Danh sách cổ vũ Làng 8</h3>
+      <p class="reg-modal-sub" id="regCount">Đang tải...</p>
+      <div class="reg-list-wrap">
+        <ul class="reg-list" id="regList"></ul>
+      </div>
+      <details class="reg-json-details">
+        <summary>Xem dữ liệu JSON</summary>
+        <pre class="reg-json" id="regJson"></pre>
+      </details>
+    </div>
+  </div>
+
+  <!-- Confetti container -->
+  <div class="confetti-wrap" id="confetti" aria-hidden="true"></div>
+
+  <!-- Bắt buộc bật loa -->
+  <div class="sound-gate" id="soundGate" hidden>
+    <div class="sound-gate-backdrop"></div>
+    <div class="sound-gate-panel">
+      <p class="sound-gate-badge">✝ Cổ Vũ Làng 8</p>
+      <p class="sound-gate-text">Bật loa để vào ngày hội!</p>
+      <button type="button" class="sound-gate-btn" id="soundGateBtn" aria-label="Mở loa">
+        <span class="sound-gate-icon" aria-hidden="true">🔊</span>
+        <span class="sound-gate-label">MỞ LOA</span>
+      </button>
+      <p class="sound-gate-hint">Nhấn nút trên để nghe nhạc cổ vũ</p>
+    </div>
+  </div>
+
+  <!-- Nhạc nền -->
+  <audio id="bgMusic" src="mp3/bongda.mp3" loop preload="auto"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

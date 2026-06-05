@@ -78,13 +78,7 @@ img { max-width: 100%; display: block; }
 
 .preloader-ball,
 .preloader-shuttle {
-  display: inline-block;
   font-size: 3rem;
-  line-height: 1;
-  padding: 0;
-  background: none;
-  border: none;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
   filter: drop-shadow(0 0 20px rgba(244, 196, 48, 0.5));
 }
 
@@ -427,31 +421,21 @@ img { max-width: 100%; display: block; }
 
 .hero-ball {
   font-size: 8rem;
-  line-height: 1;
-  display: inline-block;
   position: absolute;
   z-index: 4;
   left: 35%;
   filter: drop-shadow(0 0 40px rgba(244, 196, 48, 0.3));
   opacity: 0;
-  background: none;
-  border: none;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }
 
 .hero-shuttle {
   font-size: 5rem;
-  line-height: 1;
-  display: inline-block;
   position: absolute;
   z-index: 4;
   right: 30%;
   top: 15%;
   filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.4));
   opacity: 0;
-  background: none;
-  border: none;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }
 
 .crowd-silhouette {
@@ -1571,10 +1555,6 @@ body.sound-locked {
     display: none;
   }
 
-  .preloader {
-    display: none !important;
-  }
-
   .nav,
   .match-card,
   .sound-gate-panel {
@@ -1617,12 +1597,8 @@ body.sound-locked {
   }
 
   .megaphone { font-size: 4rem; }
-
-  .hero-ball,
-  .hero-shuttle,
-  .preloader-icons {
-    display: none !important;
-  }
+  .hero-ball { font-size: 5rem; left: 25%; }
+  .hero-shuttle { font-size: 3.5rem; right: 20%; }
 
   .match-card {
     grid-template-columns: 1fr;

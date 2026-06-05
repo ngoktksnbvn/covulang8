@@ -595,9 +595,7 @@ img { max-width: 100%; display: block; }
 .chant--highlight {
   border-left-color: var(--red);
   background: linear-gradient(90deg, rgba(230, 57, 70, 0.18), rgba(244, 196, 48, 0.1));
-  font-size: 1.1rem;
-  grid-column: 1 / -1;
-  text-align: center;
+  font-size: 1.05rem;
 }
 
 .chant--faith {

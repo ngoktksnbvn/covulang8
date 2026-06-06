@@ -54,7 +54,8 @@ function initPreloader() {
       duration: 1.2,
       ease: "bounce.out",
     }, "-=0.9")
-    .to(".preloader-text", { opacity: 1, duration: 0.3 }, "-=0.4");
+    .to(".preloader-text", { opacity: 1, duration: 0.3 }, "-=0.4")
+    .to({}, { duration: 1.5 });
 }
 
 /* ===== Hero entrance ===== */

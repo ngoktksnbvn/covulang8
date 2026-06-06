@@ -4,37 +4,38 @@
   "hero": {
     "_viTri": "Banner đầu trang — 3 ảnh lơ lửng bên phải",
     "collage": [
-      "img/sinhvien/2.JPG",
-      "img/sinhvien/3.jpg",
-      "img/sinhvien/IMG_6052.JPG"
+      "img/sinhvien/sv1.JPG",
+      "img/sinhvien/sv5.JPG",
+      "img/sinhvien/sv8.JPG"
     ]
   },
 
   "sinhVien": {
     "_viTri": "Section Thế hệ ra trường",
     "sectionRaTruong": [
+      "img/sinhvien/sv2.JPG",
+      "img/sinhvien/sv3.JPG",
+      "img/sinhvien/sv4.JPG",
+      "img/sinhvien/sv6.JPG",
+      "img/sinhvien/sv7.JPG",
       "img/sinhvien/2.JPG",
-
       "img/sinhvien/3.jpg",
-
       "img/sinhvien/4 - Copy (2).jpg",
-      "img/sinhvien/IMG_6052.JPG",
-      "img/sinhvien/IMG_6052 - Copy.JPG",
-      "img/sinhvien/IMG_6052 - Copy (2).JPG"
+      "img/sinhvien/IMG_6052.JPG"
     ]
   },
 
   "bongDa": {
     "_viTri": "Trận bóng đá nữ, ảnh đội hình chị em sân cỏ",
     "stripDuoiTran": [
-      "img/bongda/2.JPG",
-      "img/bongda/2 - Copy.JPG",
-      "img/bongda/3.jpg",
+      "img/bongda/4 - Copy (2).jpg",
+      "img/sinhvien/sv3.jpg",
       "img/bongda/3 - Copy.jpg",
-      "img/bongda/4.jpg",
-      "img/bongda/4 - Copy.jpg",
-      "img/bongda/IMG_6052.JPG",
-      "img/bongda/IMG_6052 - Copy.JPG"
+      "img/sinhvien/sv8.jpg",
+      "img/bongda/IMG_6052 - Copy (2).JPG",
+      "img/sinhvien/sv6.jpg",
+      "img/bongda/3.jpg",
+      "img/bongda/2 - Copy (2).JPG"
     ],
     "doiHinh": {
       "_viTri": "6 ảnh chị em sân cỏ — thứ tự thẻ từ trái sang phải, trên xuống",
@@ -99,8 +100,10 @@
       "img/lang8/3.jpg",
       "img/lang8/4.jpg",
       "img/lang8/IMG_6052.JPG",
-      "img/lang8/sv_2.JPG",
-      "img/lang8/sv_2 - Copy.JPG"
+      "img/sinhvien/sv1.JPG",
+      "img/sinhvien/sv2.JPG",
+      "img/sinhvien/sv3.JPG",
+      "img/sinhvien/sv4.JPG"
     ]
   },
 

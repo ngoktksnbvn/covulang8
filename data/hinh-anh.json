@@ -1,51 +1,51 @@
 {
-  "_huongDan": "Sửa link ảnh bên dưới. Path tương đối từ thư mục gốc (vd: img/sinhvien/ten-anh.jpg) hoặc link đầy đủ https://...",
+  "_huongDan": "Sửa link ảnh bên dưới. Path tương đối từ thư mục gốc (vd: img/webp/ten-anh_11zon.webp) hoặc link đầy đủ https://...",
 
   "hero": {
     "_viTri": "Banner đầu trang — 3 ảnh lơ lửng bên phải",
     "collage": [
-      "img/sinhvien/sv1.JPG",
-      "img/sinhvien/sv5.JPG",
-      "img/sinhvien/sv8.JPG"
+      "img/webp/sv1_11zon.webp",
+      "img/webp/sv5_11zon.webp",
+      "img/webp/sv8_11zon.webp"
     ]
   },
 
   "sinhVien": {
     "_viTri": "Section Thế hệ ra trường",
     "sectionRaTruong": [
-      "img/sinhvien/sv2.JPG",
-      "img/sinhvien/sv3.JPG",
-      "img/sinhvien/sv4.JPG",
-      "img/sinhvien/sv6.JPG",
-      "img/sinhvien/sv7.JPG",
-      "img/sinhvien/2.JPG",
-      "img/sinhvien/3.jpg",
-      "img/sinhvien/4 - Copy (2).jpg",
-      "img/sinhvien/IMG_6052.JPG"
+      "img/webp/sv2_11zon.webp",
+      "img/webp/sv3_11zon.webp",
+      "img/webp/sv4_11zon.webp",
+      "img/webp/sv6_11zon.webp",
+      "img/webp/sv7_11zon.webp",
+      "img/webp/2_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/4 - Copy (2)_11zon.webp",
+      "img/webp/IMG_6052_11zon.webp"
     ]
   },
 
   "bongDa": {
     "_viTri": "Trận bóng đá nữ, ảnh đội hình chị em sân cỏ",
     "stripDuoiTran": [
-      "img/bongda/4.jpg",
-      "img/sinhvien/sv3.JPG",
-      "img/bongda/3.jpg",
-      "img/sinhvien/sv8.JPG",
-      "img/bongda/IMG_6052.JPG",
-      "img/sinhvien/sv6.JPG",
-      "img/bongda/3 - Copy.jpg",
-      "img/bongda/2.JPG"
+      "img/webp/4_11zon.webp",
+      "img/webp/sv3_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/sv8_11zon.webp",
+      "img/webp/IMG_6052_11zon.webp",
+      "img/webp/sv6_11zon.webp",
+      "img/webp/3 - Copy_11zon.webp",
+      "img/webp/2_11zon.webp"
     ],
     "doiHinh": {
       "_viTri": "6 ảnh chị em sân cỏ — thứ tự thẻ từ trái sang phải, trên xuống",
       "danhSach": [
-        "img/bongda/2.JPG",
-        "img/bongda/3.jpg",
-        "img/bongda/4.jpg",
-        "img/bongda/IMG_6052.JPG",
-        "img/bongda/2 - Copy.JPG",
-        "img/bongda/3 - Copy.jpg"
+        "img/webp/2_11zon.webp",
+        "img/webp/3_11zon.webp",
+        "img/webp/4_11zon.webp",
+        "img/webp/IMG_6052_11zon.webp",
+        "img/webp/2 - Copy_11zon.webp",
+        "img/webp/3 - Copy_11zon.webp"
       ]
     }
   },
@@ -53,24 +53,24 @@
   "cauLong": {
     "_viTri": "Trận cầu lông, ảnh đội hình",
     "stripDuoiTran": [
-      "img/caulong/2.JPG",
-      "img/caulong/2 - Copy.JPG",
-      "img/caulong/3.jpg",
-      "img/caulong/3 - Copy.jpg",
-      "img/caulong/4.jpg",
-      "img/caulong/4 - Copy.jpg",
-      "img/caulong/IMG_6052.JPG",
-      "img/caulong/IMG_6052 - Copy.JPG"
+      "img/webp/2_11zon.webp",
+      "img/webp/2 - Copy_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/3 - Copy_11zon.webp",
+      "img/webp/4_11zon.webp",
+      "img/webp/4 - Copy_11zon.webp",
+      "img/webp/IMG_6052_11zon.webp",
+      "img/webp/IMG_6052 - Copy_11zon.webp"
     ],
     "doiHinh": {
       "_viTri": "6 ảnh tay vợt — thứ tự: Smash → Drop → Clear → Net → Drive → Đôi",
       "danhSach": [
-        "img/caulong/2.JPG",
-        "img/caulong/3.jpg",
-        "img/caulong/4.jpg",
-        "img/caulong/IMG_6052.JPG",
-        "img/caulong/2 - Copy.JPG",
-        "img/caulong/3 - Copy.jpg"
+        "img/webp/2_11zon.webp",
+        "img/webp/3_11zon.webp",
+        "img/webp/4_11zon.webp",
+        "img/webp/IMG_6052_11zon.webp",
+        "img/webp/2 - Copy_11zon.webp",
+        "img/webp/3 - Copy_11zon.webp"
       ]
     }
   },
@@ -78,32 +78,32 @@
   "coDongVien": {
     "_viTri": "Section Cổ động viên — lưới ảnh cuối",
     "gallery": [
-      "img/sinhvien/2.JPG",
-      "img/sinhvien/3.jpg",
-      "img/bongda/4.jpg",
-      "img/caulong/2.JPG",
-      "img/lang8/IMG_6052.JPG",
-      "img/sinhvien/IMG_6052 - Copy.JPG",
-      "img/bongda/3 - Copy.jpg",
-      "img/caulong/4 - Copy.jpg",
-      "img/lang8/3.jpg",
-      "img/sinhvien/4 - Copy (2).jpg",
-      "img/bongda/2 - Copy (2).JPG",
-      "img/caulong/IMG_6052 - Copy.JPG"
+      "img/webp/2_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/4_11zon.webp",
+      "img/webp/2_11zon.webp",
+      "img/webp/IMG_6052_11zon.webp",
+      "img/webp/IMG_6052 - Copy_11zon.webp",
+      "img/webp/3 - Copy_11zon.webp",
+      "img/webp/4 - Copy_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/4 - Copy (2)_11zon.webp",
+      "img/webp/2 - Copy (2)_11zon.webp",
+      "img/webp/IMG_6052 - Copy_11zon.webp"
     ]
   },
 
   "lang8": {
-    "_viTri": "Section KHOẢNH KHẮC LÀNG 8 — ảnh trong img/lang8/ (40 ảnh)",
+    "_viTri": "Section KHOẢNH KHẮC LÀNG 8 — ảnh trong img/webp/",
     "khoanhKhac": [
-      "img/lang8/2.JPG",
-      "img/lang8/3.jpg",
-      "img/lang8/4.jpg",
-      "img/lang8/IMG_6052.JPG",
-      "img/sinhvien/sv1.JPG",
-      "img/sinhvien/sv2.JPG",
-      "img/sinhvien/sv3.JPG",
-      "img/sinhvien/sv4.JPG"
+      "img/webp/2_11zon.webp",
+      "img/webp/3_11zon.webp",
+      "img/webp/4_11zon.webp",
+      "img/webp/IMG_6052_11zon.webp",
+      "img/webp/sv1_11zon.webp",
+      "img/webp/sv2_11zon.webp",
+      "img/webp/sv3_11zon.webp",
+      "img/webp/sv4_11zon.webp"
     ]
   },
 
